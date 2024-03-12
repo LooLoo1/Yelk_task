@@ -26,6 +26,10 @@ export const Home = () => {
 			<Row gutter={[16, 16]}>
 				{airports &&
 					airports.map((airport, i) => <Frame key={i} airport={airport} />)}
+
+				{airports && airports.length === 0 ? (
+					<h2 style={{ margin: "0 auto" }}>No results</h2>
+				) : null}
 			</Row>
 		</Flex>
 	);
